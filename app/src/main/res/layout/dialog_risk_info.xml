@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Как рассчитывается риск"
+            android:textColor="#222222"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Приложение оценивает погодные условия по баллам и определяет один из трёх уровней метеориска."
+            android:textColor="#666666"
+            android:textSize="16sp"
+            android:lineSpacingExtra="3dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_risk_low"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Низкий риск"
+                android:textColor="#1B5E20"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#B8DDBD" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Погодные условия стабильные. Давление находится в нормальном диапазоне, влажность не превышает 80%, температура не выходит за комфортные границы."
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Условие: 0–1 балл"
+                android:textColor="#1B5E20"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_risk_medium"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Средний риск"
+                android:textColor="#795548"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#D8C98A" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Есть один или несколько умеренных факторов: высокая влажность, некомфортная температура или отклонение атмосферного давления. Рекомендуется внимательнее следить за самочувствием."
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Условие: 2–3 балла"
+                android:textColor="#795548"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_risk_high"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Высокий риск"
+                android:textColor="#B71C1C"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#E6A6A6" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Обнаружено несколько неблагоприятных факторов одновременно. Например, давление ниже 740 или выше 770 мм рт. ст., влажность выше 80%, температура ниже -10 °C или выше 30 °C."
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:lineSpacingExtra="3dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Условие: 4 и более баллов"
+                android:textColor="#B71C1C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Как начисляются баллы"
+                android:textColor="#222222"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Давление вне нормы — 2 балла\nВлажность выше 80% — 1 балл\nТемпература ниже -10 °C или выше 30 °C — 1 балл"
+                android:textColor="#222222"
+                android:textSize="16sp"
+                android:lineSpacingExtra="5dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

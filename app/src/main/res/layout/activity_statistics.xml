@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/backTitle"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue_main"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:text="←   Статистика"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Основной вывод"
+                    android:textColor="#222222"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/mainResultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Пока недостаточно данных для анализа."
+                    android:textColor="#222222"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:id="@+id/badDaysText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Записей с плохим самочувствием: 0"
+                    android:textColor="#666666"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_card"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Анализ факторов"
+                    android:textColor="#222222"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/statInfoText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:lineSpacingExtra="3dp"
+                    android:text="Проценты показывают, как часто погодный фактор совпадал с записями, где самочувствие было отмечено как плохое."
+                    android:textColor="#666666"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/pressureLabelText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Атмосферное давление"
+                    android:textColor="#222222"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/pressureBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#E0E0E0">
+
+                    <View
+                        android:id="@+id/pressureFill"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/pressurePercentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:paddingEnd="12dp"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/humidityLabelText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Высокая влажность"
+                    android:textColor="#222222"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/humidityBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#E0E0E0">
+
+                    <View
+                        android:id="@+id/humidityFill"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/humidityPercentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:paddingEnd="12dp"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/temperatureLabelText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Некомфортная температура"
+                    android:textColor="#222222"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <FrameLayout
+                    android:id="@+id/temperatureBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#E0E0E0">
+
+                    <View
+                        android:id="@+id/temperatureFill"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+                        android:id="@+id/temperaturePercentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|end"
+                        android:paddingEnd="12dp"
+                        android:text="0%"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recommendationCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_card"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Рекомендация"
+                    android:textColor="#222222"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/statRecommendationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="Продолжайте вести дневник, чтобы приложение могло определить индивидуальные погодные триггеры."
+                    android:textColor="#222222"
+                    android:textSize="19sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/doneButton"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_button"
+                android:gravity="center"
+                android:text="Готово"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/blue_main"
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="МетеоПомощник"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/cityText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Moscow"
+                    android:textColor="#222222"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp">
+
+                    <TextView
+                        android:id="@+id/weatherIconText"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="☁"
+                        android:textSize="58sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/temperatureText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18 °C"
+                            android:textColor="#222222"
+                            android:textSize="44sp" />
+
+                        <TextView
+                            android:id="@+id/descriptionText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Облачно"
+                            android:textColor="#222222"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:background="#DDDDDD" />
+
+                <TextView
+                    android:id="@+id/pressureText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Давление: 752 мм рт. ст."
+                    android:textColor="#222222"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/humidityText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Влажность: 65%"
+                    android:textColor="#222222"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/riskContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_risk_medium"
+                android:clickable="true"
+                android:elevation="3dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/riskShieldText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="12dp"
+                        android:text="🛡"
+                        android:textSize="34sp" />
+
+                    <TextView
+                        android:id="@+id/riskLevelText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Средний риск"
+                        android:textColor="#222222"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="#D0D0D0" />
+
+                <TextView
+                    android:id="@+id/recommendationText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Рекомендуется следить за самочувствием и избегать перегрузок."
+                    android:textColor="#222222"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="Нажмите, чтобы узнать подробнее"
+                    android:textColor="#666666"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/openDiaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_light_button"
+                android:drawableStart="@drawable/ic_diary"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/blue_main"
+                android:gravity="center"
+                android:text="Открыть дневник"
+                android:textColor="@color/blue_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/profileButton"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_light_button"
+                android:drawableStart="@drawable/ic_profile"
+                android:drawablePadding="12dp"
+                android:drawableTint="@color/blue_main"
+                android:gravity="center"
+                android:text="Профиль"
+                android:textColor="@color/blue_main"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_home"
+            android:drawablePadding="4dp"
+            android:drawableTint="@color/blue_main"
+            android:gravity="center"
+            android:text="Главная"
+            android:textColor="@color/blue_main"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/navDiary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_diary"
+            android:drawablePadding="4dp"
+            android:drawableTint="#666666"
+            android:gravity="center"
+            android:text="Дневник"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/ic_profile"
+            android:drawablePadding="4dp"
+            android:drawableTint="#666666"
+            android:gravity="center"
+            android:text="Профиль"
+            android:textColor="#666666"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
